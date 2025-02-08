@@ -5,6 +5,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
+    scroll-behavior: smooth; /* Desplazamiento suave */
 }
 
 /* Cabecera con logo SAP */
@@ -19,30 +20,30 @@ header {
     text-align: center;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 28px;
-}
-
-header p {
-    margin: 5px 0 20px;
-    font-size: 18px;
-}
-
+/* Estilos del menú de navegación */
 nav ul {
     list-style: none;
     padding: 0;
 }
 
 nav ul li {
-    display: inline;
+    display: inline-block;
     margin: 0 15px;
 }
 
 nav ul li a {
+    background-color: #0f4c81; /* Azul SAP */
     color: white;
     text-decoration: none;
     font-size: 16px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+nav ul li a:hover {
+    background-color: #1a6dbb; /* Azul más claro */
+    transform: scale(1.05); /* Pequeño efecto al pasar el ratón */
 }
 
 /* Secciones */
@@ -54,11 +55,6 @@ nav ul li a {
     max-width: 800px;
     border-radius: 8px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-h2 {
-    color: #0f4c81;
-    margin-bottom: 10px;
 }
 
 /* Experiencia */
@@ -112,4 +108,9 @@ a:hover {
 .language-selector select {
     padding: 5px;
     border-radius: 5px;
+}
+
+/* Animación de desplazamiento suave */
+html {
+    scroll-behavior: smooth;
 }
