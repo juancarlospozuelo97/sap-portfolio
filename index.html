@@ -30,6 +30,52 @@
         </nav>
     </header>
 
+    <!-- Sección Sobre Mí -->
+    <section id="about" class="section">
+        <h2 id="about-title">Sobre Mí</h2>
+        <p id="about-text">Soy un consultor técnico-funcional SAP con amplia experiencia en los módulos SD y MM.</p>
+    </section>
+
+    <!-- Sección Experiencia -->
+    <section id="experience" class="section">
+        <h2 id="experience-title">Experiencia Profesional</h2>
+
+        <div class="experience">
+            <h3>MANGO <span>(October 2024 - Present day)</span></h3>
+            <div id="mango-es">
+                <p>- Migración COBOL-SAP como Consultor SAP para MANGO en los módulos SD-MM:</p>
+                <ul>
+                    <li>Diseño de procesos y recopilación de requisitos en procesos Retail (Allocation Run, Distribution Curve, Replenishment, Segmentation, Season Workbench, Supply demand, BRF+, etc...)</li>
+                    <li>Mantenimiento y personalización en SAP CAR (Omnichannel, Advanced Returns Management, Allocation Tables, etc…)</li>
+                    <li>Gestión de tareas y desarrollos de procesos existentes</li>
+                </ul>
+                <p>- Actualización de SAP S/4 HANA de la versión 2020 a 2023 como Consultor SAP para MANGO:</p>
+                <ul>
+                    <li>Revisión y ejecución de SPAU_ENH y SPAD</li>
+                    <li>Revisión de nueva funcionalidad - Fiori y Backend - existente en la versión 2023</li>
+                    <li>Pruebas de flujos y procesos existentes en el sistema para el módulo SD/MM</li>
+                    <li>Pruebas de regresión con sistemas externos (WMS, DXC, UNIVERSE)</li>
+                </ul>
+            </div>
+            <div id="mango-en" style="display: none;">
+                <p>- COBOL-SAP migration as SAP Consultant for MANGO in the SD-MM modules:</p>
+                <ul>
+                    <li>Process design and requirements gathering in Retail processes (Allocation Run, Distribution Curve, Replenishment, Segmentation, Season Workbench, Supply demand, BRF+, etc...)</li>
+                    <li>Maintenance and customizing in SAP CAR (Omnichannel, Advanced Returns Management, Allocation Tables, etc…)</li>
+                    <li>Management of tasks and developments of existing processes</li>
+                </ul>
+                <p>- Upgrade from SAP S/4 HANA version 2020 to 2023 as SAP Consultant for MANGO:</p>
+                <ul>
+                    <li>Review and execution of SPAU_ENH and SPAD</li>
+                    <li>Review of new functionality - Fiori and Backend - existing in version 2023</li>
+                    <li>Testing of existing flows and processes in the system for the SD/MM module</li>
+                    <li>Regression testing with external systems (WMS, DXC, UNIVERSE)</li>
+                </ul>
+            </div>
+        </div>
+
+    </section>
+
     <!-- Sección Contacto -->
     <section id="contact" class="section">
         <h2 id="contact-title">Contacto</h2>
@@ -44,6 +90,44 @@
             </a>
         </div>
     </section>
+
+    <script>
+        function changeLanguage() {
+            var lang = document.getElementById("language").value;
+
+            var texts = {
+                "es": {
+                    "title": "Juan Carlos Pozuelo",
+                    "subtitle": "Consultor Técnico-Funcional SAP SD/MM",
+                    "nav-about": "Sobre mí",
+                    "nav-experience": "Experiencia",
+                    "nav-certifications": "Certificaciones",
+                    "nav-contact": "Contacto",
+                    "about-title": "Sobre Mí",
+                    "about-text": "Soy un consultor técnico-funcional SAP con amplia experiencia en los módulos SD y MM.",
+                    "experience-title": "Experiencia Profesional"
+                },
+                "en": {
+                    "title": "Juan Carlos Pozuelo",
+                    "subtitle": "SAP SD/MM Technical-Functional Consultant",
+                    "nav-about": "About Me",
+                    "nav-experience": "Experience",
+                    "nav-certifications": "Certifications",
+                    "nav-contact": "Contact",
+                    "about-title": "About Me",
+                    "about-text": "I am a SAP SD/MM Technical-Functional Consultant with extensive experience.",
+                    "experience-title": "Work Experience"
+                }
+            };
+
+            for (var key in texts[lang]) {
+                document.getElementById(key).innerText = texts[lang][key];
+            }
+
+            document.getElementById("mango-es").style.display = lang === "es" ? "block" : "none";
+            document.getElementById("mango-en").style.display = lang === "en" ? "block" : "none";
+        }
+    </script>
 
 </body>
 </html>
