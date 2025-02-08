@@ -30,46 +30,6 @@
         </nav>
     </header>
 
-    <!-- Sección Sobre Mí -->
-    <section id="about" class="section">
-        <h2 id="about-title">Sobre Mí</h2>
-        <p id="about-text">Soy un consultor técnico-funcional SAP con amplia experiencia en los módulos SD y MM.</p>
-    </section>
-
-    <!-- Sección Experiencia -->
-    <section id="experience" class="section">
-        <h2 id="experience-title">Experiencia Profesional</h2>
-
-        <div class="experience">
-            <h3>MANGO <span>(October 2024 - Present day)</span></h3>
-            <p>- COBOL-SAP migration as SAP Consultant for MANGO in the SD-MM modules:</p>
-            <ul>
-                <li>Process design and requirements gathering in Retail processes (Allocation Run, Distribution Curve, Replenishment, Segmentation, Season Workbench, Supply demand, BRF+, etc...)</li>
-                <li>Maintenance and customizing in SAP CAR (Omnichannel, Advanced Returns Management, Allocation Tables, etc…)</li>
-                <li>Management of tasks and developments of existing processes</li>
-            </ul>
-            <p>- Upgrade from SAP S/4 HANA version 2020 to 2023 as SAP Consultant for MANGO:</p>
-            <ul>
-                <li>Review and execution of SPAU_ENH and SPAD</li>
-                <li>Review of new functionality - Fiori and Backend - existing in version 2023</li>
-                <li>Testing of existing flows and processes in the system for the SD/MM module</li>
-                <li>Regression testing with external systems (WMS, DXC, UNIVERSE)</li>
-            </ul>
-        </div>
-
-        <!-- Más experiencias -->
-    </section>
-
-    <!-- Sección Certificaciones -->
-    <section id="certifications" class="section">
-        <h2 id="certifications-title">Certificaciones</h2>
-        <ul>
-            <li>SAP Certified Application Associate - SAP S/4HANA Sales 2021</li>
-            <li>SAP Certified Application Associate - Sourcing and Procurement</li>
-            <li>SAP Certified Application Associate - Extended Warehouse Management</li>
-        </ul>
-    </section>
-
     <!-- Sección Contacto -->
     <section id="contact" class="section">
         <h2 id="contact-title">Contacto</h2>
@@ -78,47 +38,12 @@
                 <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Gmail Logo" width="24" height="24">
                 juancarlos.pozuelo.ag@gmail.com
             </a>
-            <a href="https://www.linkedin.com/in/juan-carlos-pozuelo-agüera" target="_blank">
+            <a href="https://www.linkedin.com/in/juan-carlos-pozuelo-agüera-81ba1414b" target="_blank">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn Logo" width="24" height="24">
                 LinkedIn
             </a>
         </div>
     </section>
-
-    <script>
-        function changeLanguage() {
-            var lang = document.getElementById("language").value;
-
-            var texts = {
-                "es": {
-                    "title": "Juan Carlos Pozuelo",
-                    "subtitle": "Consultor Técnico-Funcional SAP SD/MM",
-                    "nav-about": "Sobre mí",
-                    "nav-experience": "Experiencia",
-                    "nav-certifications": "Certificaciones",
-                    "nav-contact": "Contacto",
-                    "about-title": "Sobre Mí",
-                    "about-text": "Soy un consultor técnico-funcional SAP con amplia experiencia en los módulos SD y MM.",
-                    "experience-title": "Experiencia Profesional"
-                },
-                "en": {
-                    "title": "Juan Carlos Pozuelo",
-                    "subtitle": "SAP SD/MM Technical-Functional Consultant",
-                    "nav-about": "About Me",
-                    "nav-experience": "Experience",
-                    "nav-certifications": "Certifications",
-                    "nav-contact": "Contact",
-                    "about-title": "About Me",
-                    "about-text": "I am a SAP SD/MM Technical-Functional Consultant with extensive experience.",
-                    "experience-title": "Work Experience"
-                }
-            };
-
-            for (var key in texts[lang]) {
-                document.getElementById(key).innerText = texts[lang][key];
-            }
-        }
-    </script>
 
 </body>
 </html>
