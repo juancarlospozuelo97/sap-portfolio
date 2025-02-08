@@ -95,6 +95,7 @@ ul li {
     justify-content: center;
     gap: 15px;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .contact-links a {
@@ -111,8 +112,8 @@ ul li {
 }
 
 .contact-links img {
-    width: 32px;
-    height: 32px;
+    width: 24px; /* Reducción del tamaño de los iconos */
+    height: 24px;
     margin-right: 8px;
 }
 
