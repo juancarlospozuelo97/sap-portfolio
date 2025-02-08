@@ -12,7 +12,6 @@
     <!-- Cabecera con Logo SAP -->
     <header>
         <div class="header-container">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/5/59/SAP_2011_logo.svg" alt="SAP Logo" class="sap-logo">
             <div class="language-selector">
                 <label for="language">🌍</label>
                 <select id="language" onchange="changeLanguage()">
@@ -47,50 +46,44 @@
 
         <div class="experience">
             <h3>MANGO <span>(October 2024 - Present day)</span></h3>
-            <p>- Migración COBOL-SAP como Consultor SAP para MANGO en los módulos SD-MM:</p>
-            <ul>
-                <li>Diseño de procesos y recopilación de requisitos en procesos Retail (Allocation Run, Distribution Curve, Replenishment, Segmentation, Season Workbench, Supply demand, BRF+, etc...)</li>
-                <li>Mantenimiento y personalización en SAP CAR (Omnichannel, Advanced Returns Management, Allocation Tables, etc…)</li>
-                <li>Gestión de tareas y desarrollos de procesos existentes</li>
-            </ul>
+            <p class="es">- Migración COBOL-SAP como Consultor SAP para MANGO en los módulos SD-MM.</p>
+            <p class="en" style="display:none;">- COBOL-SAP migration as SAP Consultant for MANGO in SD-MM modules.</p>
+            <p class="de" style="display:none;">- COBOL-SAP-Migration als SAP-Berater für MANGO in den SD-MM-Modulen.</p>
         </div>
 
         <div class="experience">
             <h3>Inetum <span>(Marzo 2024 - Octubre 2024)</span></h3>
-            <p>- Gestión del equipo Base como Project Manager para Madrid Digital (Comunidad de Madrid – Sector Público):</p>
-            <ul>
-                <li>Gestión y resolución de incidencias y evolutivos en los módulos de SAP MM/SD/PM</li>
-                <li>Gestión de un equipo de 5 personas: vacaciones, evaluaciones, asignación de trabajo</li>
-            </ul>
+            <p class="es">- Gestión del equipo Base como Project Manager para Madrid Digital.</p>
+            <p class="en" style="display:none;">- Team management as Project Manager for Madrid Digital.</p>
+            <p class="de" style="display:none;">- Teammanagement als Projektmanager für Madrid Digital.</p>
         </div>
 
         <div class="experience">
             <h3>Minsait <span>(Diciembre 2022 - Marzo 2024)</span></h3>
-            <p>- Migración y conversión de BPs a S/4 HANA para ENCE Energía y Celulosa:</p>
-            <ul>
-                <li>Conversión de proveedores/clientes/empleados a BPs</li>
-                <li>Implementación de notas SAP y carga de datos CVI</li>
-            </ul>
+            <p class="es">- Migración y conversión de BPs a S/4 HANA para ENCE Energía y Celulosa.</p>
+            <p class="en" style="display:none;">- BP migration and conversion to S/4 HANA for ENCE Energía y Celulosa.</p>
+            <p class="de" style="display:none;">- Migration und Konvertierung von BPs auf S/4 HANA für ENCE Energía y Celulosa.</p>
         </div>
 
         <div class="experience">
             <h3>PwC <span>(Septiembre 2022 - Diciembre 2022)</span></h3>
-            <p>- Optimización de procesos y migración de datos para ENGIE España y Eolia.</p>
+            <p class="es">- Optimización de procesos y migración de datos para ENGIE España y Eolia.</p>
+            <p class="en" style="display:none;">- Process optimization and data migration for ENGIE Spain and Eolia.</p>
+            <p class="de" style="display:none;">- Prozessoptimierung und Datenmigration für ENGIE Spanien und Eolia.</p>
         </div>
 
         <div class="experience">
             <h3>IBM <span>(Junio 2022 - Agosto 2022)</span></h3>
-            <p>- Implementación del Gateway en SAP ECC y desarrollo de interfaces Odata para Orange.</p>
+            <p class="es">- Implementación del Gateway en SAP ECC y desarrollo de interfaces Odata.</p>
+            <p class="en" style="display:none;">- Gateway implementation in SAP ECC and development of OData interfaces.</p>
+            <p class="de" style="display:none;">- Implementierung des Gateways in SAP ECC und Entwicklung von OData-Schnittstellen.</p>
         </div>
 
         <div class="experience">
             <h3>Minsait <span>(Mayo 2021 - Junio 2022)</span></h3>
-            <p>- Digitalización y mejora de procesos en SAP ECC en los módulos de MM/SD/CO-PS para ENCE.</p>
-        </div>
-
-        <div class="experience">
-            <h3>Antartyca Consulting <span>(Diciembre 2018 - Mayo 2021)</span></h3>
-            <p>- Implementación de SAP SD/MM y desarrollo de soluciones personalizadas.</p>
+            <p class="es">- Digitalización y mejora de procesos en SAP ECC en los módulos de MM/SD/CO-PS.</p>
+            <p class="en" style="display:none;">- Digitization and process improvement in SAP ECC for MM/SD/CO-PS modules.</p>
+            <p class="de" style="display:none;">- Digitalisierung und Prozessverbesserung in SAP ECC für MM/SD/CO-PS-Module.</p>
         </div>
 
     </section>
@@ -108,11 +101,27 @@
                 LinkedIn
             </a>
             <a href="https://www.credly.com/users/juan-carlos-pozuelo-aguera" target="_blank">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Credly_logo.png" alt="Credly Logo" width="24" height="24">
+                <img src="https://cdn.worldvectorlogo.com/logos/credly.svg" alt="Credly Logo" width="24" height="24">
                 Juan Carlos Pozuelo
             </a>
         </div>
     </section>
+
+    <script>
+        function changeLanguage() {
+            var lang = document.getElementById("language").value;
+
+            var sections = document.querySelectorAll(".experience p");
+            sections.forEach(section => {
+                section.style.display = "none";
+            });
+
+            var activeSections = document.querySelectorAll(".experience ." + lang);
+            activeSections.forEach(section => {
+                section.style.display = "block";
+            });
+        }
+    </script>
 
 </body>
 </html>
