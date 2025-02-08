@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juan Carlos Pozuelo - SAP Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Cabecera con Logo SAP -->
+    <header>
+        <div class="language-selector">
+            <label for="language">🌍</label>
+            <select id="language" onchange="changeLanguage()">
+                <option value="es">Español</option>
+                <option value="en">English</option>
+            </select>
+        </div>
+        <h1 id="title">Juan Carlos Pozuelo</h1>
+        <p id="subtitle">Consultor Técnico-Funcional SAP SD/MM</p>
+        <nav>
+            <ul>
+                <li><a href="#about" id="nav-about">Sobre mí</a></li>
+                <li><a href="#experience" id="nav-experience">Experiencia</a></li>
+                <li><a href="#certifications" id="nav-certifications">Certificaciones</a></li>
+                <li><a href="#contact" id="nav-contact">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sección Sobre Mí -->
+    <section id="about" class="section">
+        <h2 id="about-title">Sobre Mí</h2>
+        <p id="about-text">Soy un consultor técnico-funcional SAP con amplia experiencia en los módulos SD y MM.</p>
+    </section>
+
+    <!-- Sección Experiencia -->
+    <section id="experience" class="section">
+        <h2 id="experience-title">Experiencia Profesional</h2>
+
+        <div class="experience">
+            <h3>MANGO <span>(Octubre 2024 - Actualidad)</span></h3>
+            <p id="mango-text">Consultor SAP en migración de COBOL a SAP y actualización a S/4 HANA 2023.</p>
+        </div>
+
+        <div class="experience">
+            <h3>Inetum <span>(Marzo 2024 - Octubre 2024)</span></h3>
+            <p id="inetum-text">Implementación a medida de funcionalidades en Madrid Digital.</p>
+        </div>
+
+    </section>
+
+    <!-- Sección Certificaciones -->
+    <section id="certifications" class="section">
+        <h2 id="certifications-title">Certificaciones</h2>
+        <ul>
+            <li>SAP Certified Application Associate - SAP S/4HANA Sales 2021</li>
+            <li>SAP Certified Application Associate - Sourcing and Procurement</li>
+            <li>SAP Certified Application Associate - Extended Warehouse Management</li>
+        </ul>
+    </section>
+
+    <!-- Sección Contacto -->
+    <section id="contact" class="section">
+        <h2 id="contact-title">Contacto</h2>
+        <p>Email: <a href="mailto:1997juancar@gmail.com">1997juancar@gmail.com</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/juan-carlos-pozuelo-agüera" target="_blank">Juan Carlos Pozuelo</a></p>
+    </section>
+
+    <script>
+        function changeLanguage() {
+            var lang = document.getElementById("language").value;
+
+            var texts = {
+                "es": {
+                    "title": "Juan Carlos Pozuelo",
+                    "subtitle": "Consultor Técnico-Funcional SAP SD/MM",
+                    "nav-about": "Sobre mí",
+                    "nav-experience": "Experiencia",
+                    "nav-certifications": "Certificaciones",
+                    "nav-contact": "Contacto",
+                    "about-title": "Sobre Mí",
+                    "about-text": "Soy un consultor técnico-funcional SAP con amplia experiencia en los módulos SD y MM.",
+                    "experience-title": "Experiencia Profesional",
+                    "mango-text": "Consultor SAP en migración de COBOL a SAP y actualización a S/4 HANA 2023.",
+                    "inetum-text": "Implementación a medida de funcionalidades en Madrid Digital.",
+                    "certifications-title": "Certificaciones",
+                    "contact-title": "Contacto"
+                },
+                "en": {
+                    "title": "Juan Carlos Pozuelo",
+                    "subtitle": "SAP SD/MM Technical-Functional Consultant",
+                    "nav-about": "About Me",
+                    "nav-experience": "Experience",
+                    "nav-certifications": "Certifications",
+                    "nav-contact": "Contact",
+                    "about-title": "About Me",
+                    "about-text": "I am a SAP SD/MM Technical-Functional Consultant with extensive experience.",
+                    "experience-title": "Work Experience",
+                    "mango-text": "SAP Consultant in COBOL to SAP migration and upgrade to S/4 HANA 2023.",
+                    "inetum-text": "Custom implementation of functionalities for Madrid Digital.",
+                    "certifications-title": "Certifications",
+                    "contact-title": "Contact"
+                }
+            };
+
+            for (var key in texts[lang]) {
+                document.getElementById(key).innerText = texts[lang][key];
+            }
+        }
+    </script>
+
+</body>
+</html>
